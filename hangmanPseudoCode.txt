@@ -1,0 +1,66 @@
+Algorithm:
+    1)Make a functio that will randomly select a word from the text dictionary that we will create
+    2)The second function will take input from a the user and use it as a letter guessed
+    3)The third function will be the one that takes correct letters guessed and turn it into a string
+    4)Various variables that will store data user enters
+        A. Variable for the word the computer picks
+        B. We need to create a set of data that holds the letters guessed wrong and another one for letters guessed correctly.
+    5)Display an introduction so new players know what to do
+    6)We need to build a repetitive system, so that the user keeps guessing words
+        A. If player guesses wrong a new part of the body is drawn until game over. Number of tries goes down until they reach zero
+    7)Statements at the beginning and end to welcome and thank the user for playing
+
+#Psuedocode
+#import the random library
+
+#def a function called pick_random_word():
+    #open and word dictionary/list(words.txt)
+    
+    # variable called index = select random word from words.txt
+    #variable called word = strip the randomly selected word
+    #return the variable 'word'
+    
+#define a function called ask_for_next_letter():
+    #variable called letter = input function that asks user to select a letter 
+    #return the letter selected
+    
+#define a function called generate_woed_string(word, letters_guessed)
+    #define variable output = empty list
+    #make a for loop that goes through each letter in the variable 'word'
+        #if statement that checks if letter is in letters guessed
+            #append letter to output
+        #else
+            #append ("_")
+        #return output as a string
+        
+#create a main module:
+    #variable called WORD = pick_random_word()
+    
+    #variable called letters_to_guess = set of WORD
+    #variable called correct_letters_guessed = empty set
+    #variable called incorrect_letters-guessed = empty set
+    #variable called number_of_guesses = number of guesses you want
+    #print statement that welcomes the user to hangman
+    
+    #while loop that runs until number_of_guesses < 1 or letters_to_guess is greater than zero
+        #variable called guess =ask_for_next_letter() and turn into lower case
+        
+        #if statement that checks if guess is in correct_letters_guessed or guessed is incorrect
+            #print statement that says you already guessed 
+        
+#statement checks if guess is in letters_to_guess:
+    #remove guess from letters_to_guess 
+    #add guess to correct_letters_guessed
+    
+#else
+    #add guess to incorrect_letters_guessed
+    #number_of_guesses goes down by one
+    
+#variable called word_string = generate_word_string(WORD, correct_letters_guessed)
+#print statement that prints word_string
+#print statement that prints how many guesses you have left
+
+#if statement to check if numbers guesses is greater than a value:
+    #print congratulations you guessed the word correctly
+#else
+    #print sorry, you have lost 
