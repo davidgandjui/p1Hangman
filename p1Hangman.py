@@ -7,7 +7,7 @@ Created on Feb 28, 2020
 
 import random
 
-def pick_random_word():
+def randoword():
     f = open("wOrDs","r")
     words = f.readlines()
     index = random.randint(0, len(words)- 1)
@@ -28,7 +28,7 @@ def generate_word_string(word, letters_guessed):
     return " ".join(output)
     
 if __name__ == '__main__':
-    WORD = pick_random_word()
+    WORD = randoword()
     letters_to_guess = set(WORD)
     correct_letters_guessed = set()
     incorrect_letters_guessed = set()
